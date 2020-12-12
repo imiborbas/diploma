@@ -1,0 +1,18 @@
+{% extends "defaultLayout.html" %}
+
+{% block content %}
+  <h1>Felhasználó szerkesztése</h1>
+
+  {{ form }}
+
+  {% include "credential/associate.html" with
+    [
+      'module': module_name,
+      'object': user,
+      'object_name': 'user',
+      'available_credentials': available_credentials,
+      'credential_list': credential_list
+    ]
+  %}
+
+{% endblock %}

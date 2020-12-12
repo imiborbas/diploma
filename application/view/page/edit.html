@@ -1,0 +1,22 @@
+{% extends "defaultLayout.html" %}
+
+{% block custom_javascripts %}
+  <script src="js/ckeditor/ckeditor.js" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+  <h1>Wiki oldal szerkesztése</h1>
+
+  {{ form }}
+
+  {% include "credential/associate.html" with
+    [
+      'module': module_name,
+      'object': page,
+      'object_name': 'page',
+      'available_credentials': available_credentials,
+      'credential_list': credential_list
+    ]
+  %}
+
+{% endblock %}

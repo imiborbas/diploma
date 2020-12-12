@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC"-// W3C//DTD XHTML 1.0 Transitional//EN"" http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="cufon-active cufon-ready" xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+  {% block head %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>{% block title %}Borbás Imre Diplomamunkája: Bemutató Wiki Alkalmazás{% endblock %}</title>
+
+    <base href="{{ mvc_base_url }}" />
+
+    {% block custom_javascripts %}
+    {% endblock %}
+
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+    {% block custom_stylesheets %}
+    {% endblock %}
+
+  {% endblock %}
+  </head>
+
+  <body>
+    <div id="admin-container">
+
+      <div id="navigation">
+        {% include "menu.html" %}
+      </div>
+
+      <div id="admin-content">
+        {% include "messages.html" %}
+        {% block content %}
+        {% endblock %}
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

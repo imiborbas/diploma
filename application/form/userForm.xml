@@ -1,0 +1,42 @@
+<form action="user/save" method="post">
+  <input id="user_id" type="hidden" name="id" propertyName="Id" />
+  <label for="user_username">Felhasználónév</label>
+
+  <input type="text" name="data[username]" id="user_username" propertyName="Username" class="input">
+    <validator class="UserValidator">
+      <param name="required" value="true" />
+      <param name="user_id" property="Id" />
+      <param name="min_length" value="3" />
+      <error name="min_error">
+        A felhasználónév minimális hossza 3 karakter.
+      </error>
+      <param name="max_length" value="32" />
+      <error name="max_error">
+        A felhasználónév maximális hossza 32 karakter.
+      </error>
+    </validator>
+  </input>
+
+  <br />
+  <label for="user_password">Jelszó</label>
+
+  <input type="text" name="data[password]" id="user_password" class="input">
+    <validator class="mvcStringValidator">
+      <param name="min_length" value="3" />
+      <error name="min_error">
+        A jelszó minimális hossza 3 karakter.
+      </error>
+      <param name="max_length" value="32" />
+      <error name="max_error">
+        A jelszó maximális hossza 32 karakter.
+      </error>
+    </validator>
+  </input>
+
+  <br />
+  <label for="user_is_active">Engedélyezve</label>
+  <input type="checkbox" name="data[is_active]" value="1" id="user_is_active" propertyName="IsActive" class="checkbox" />
+  <br />
+  <input type="submit" name="save" value="Mentés" id="user_save" class="button" />
+  <input type="button" value="Mégsem" class="button" onclick="document.location.href='user/index'" />
+</form>

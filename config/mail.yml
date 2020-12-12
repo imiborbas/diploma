@@ -1,0 +1,6 @@
+mail_server:     smtp.example.com
+mail_user:       testuser
+mail_pass:       testpass
+mail_from:       testuser@example.com
+
+mail_error:      error@example.com

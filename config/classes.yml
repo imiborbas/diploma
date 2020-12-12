@@ -1,0 +1,4 @@
+session_class:     UserSession
+session_storage:   PDOSessionStorage
+error_handler:     mvcDefaultErrorHandler # EmailErrorHandler
+exception_handler: mvcDefaultExceptionHandler # EmailExceptionHandler

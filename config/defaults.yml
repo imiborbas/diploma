@@ -1,0 +1,3 @@
+default_route:
+  module: default
+  action: index

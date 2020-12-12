@@ -1,0 +1,27 @@
+<form action="page/save" method="post">
+  <input id="page_id" type="hidden" name="id" propertyName="Id" />
+  <label for="page_name">Oldal címe</label>
+
+  <input type="text" name="data[name]" id="page_name" propertyName="Name" class="input">
+    <validator class="mvcStringValidator">
+      <param name="required" value="true" />
+      <param name="min_length" value="3" />
+      <error name="min_error">
+        Az oldal címének minimális hossza 3 karakter.
+      </error>
+      <param name="max_length" value="32" />
+      <error name="max_error">
+        Az oldal címének maximális hossza 32 karakter.
+      </error>
+    </validator>
+  </input>
+
+  <br />
+  <label for="page_content">Tartalom</label>
+
+  <textarea name="data[content]" id="page_content" propertyName="Content" class="ckeditor"> </textarea>
+
+  <br />
+  <input type="submit" name="save" value="Mentés" id="page_save" class="button" />
+  <input type="button" value="Mégsem" class="button" onclick="document.location.href='page/index'" />
+</form>

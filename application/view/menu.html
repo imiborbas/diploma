@@ -1,0 +1,10 @@
+<ul class="tabNavigation">
+  {% for menu_item_name, menu_item in menu %}
+    <li>
+      <a href="{{ menu_item.module }}/{{ menu_item.action }}" title="Pages" {% if module_name == menu_item.module and action_name == menu_item.action %}class="active"{% endif %}>
+        <span class="tabNavigation_navitem">{{ menu_item_name }}
+        </span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

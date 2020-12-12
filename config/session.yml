@@ -1,0 +1,6 @@
+session_db_type: mysql
+session_db_name: diploma
+session_db_host: localhost
+session_db_port: 3306
+session_db_user: diploma
+session_db_pass: diploma

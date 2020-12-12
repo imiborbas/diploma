@@ -1,0 +1,15 @@
+{% if success_messages|length > 0 %}
+  <div class="success">
+    {% for message in success_messages %}
+      {{ message }}<br />
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if error_messages|length > 0 %}
+  <div class="fail">
+    {% for message in error_messages %}
+      {{ message }}<br />
+    {% endfor %}
+  </div>
+{% endif %}

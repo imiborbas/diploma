@@ -1,0 +1,25 @@
+menu_items:
+  "Oldalak":
+    module: page
+    action: readList
+    credential: user
+  "Oldaladminisztráció":
+    module: page
+    action: index
+    credential: admin
+  "Felhasználók":
+    module: user
+    action: index
+    credential: admin
+  "Jogosultságok":
+    module: credential
+    action: index
+    credential: admin
+  "Bejelentkezés":
+    module: user
+    action: login
+    auth: false
+  "Kijelentkezés":
+    module: user
+    action: logout
+    auth: true

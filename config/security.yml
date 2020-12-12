@@ -1,0 +1,11 @@
+security_error_action: user/unavailable
+
+security_actions:
+  default:          { credential: admin }
+  user/login:       { auth: false }
+  user/logout:      { auth: true }
+  user/unavailable: {}
+  default/index:    {}
+  error/error404:   {}
+  page/readList:    { credential: user }
+  page/read:        { credential: user }

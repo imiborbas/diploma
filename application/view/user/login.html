@@ -1,0 +1,28 @@
+{% extends "defaultLayout.html" %}
+
+{% block custom_stylesheets %}
+  <link href="css/login.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+  <form action="user/login" method="post">
+    <label for="login_username">Felhasználónév</label>
+
+    <input type="text" name="username" value="{{ username }}" id="login_username" class="input" />
+
+    <br />
+    <label for="login_password">Jelszó</label>
+
+    <input type="password" name="password" id="login_password" class="input" />
+
+    <br /><br />
+    <label for="login_captcha">CAPTCHA kód</label>
+
+    <img src="/captcha/freecap.php" alt="captcha" style="border: 1px solid #444" onclick="this.src='captcha/freecap.php?'+Math.round(Math.random()*100000)" />
+    <br />
+    <input type="text" name="word" id="login_captcha" class="input" />
+
+    <br />
+    <input type="submit" name="save" value="Bejelentkezés" id="login_submit" class="button" />
+  </form>
+{% endblock %}
